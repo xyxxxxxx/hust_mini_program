@@ -1,0 +1,27 @@
+<!--pages/map/map.wxml-->
+<!--index.wxml-->
+<view class="displaystyle">this is a title</view>
+<view class="displayaddr1">aaa</view>
+<view class="displayaddr2">bbb</view>
+<button bindtap="button_x">出发地</button>
+<button bindtap="button_y">目的地</button>
+<button bindtap="button_z">确定</button>
+
+<view class="container">
+  <map
+      id="map"
+      class="map"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      bindtap="button_x"
+      enable-zoom="{{true}}"
+      scale="{{scale}}"
+      min-scale="4"
+      markers="{{markers}}"
+      polygons="{{polygon}}"
+      polyline="{{polyline}}"
+    >
+    </map>
+    <!-- bindregionchange="bindregionchange"
+      bindpoitap="getLocation" -->
+</view>

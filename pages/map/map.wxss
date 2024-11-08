@@ -1,0 +1,28 @@
+/**index.wxss**/
+page {
+    height: 100vh;
+  }
+  
+  .displaystyle{
+    height:30px;
+  }
+  
+  .displayaddr1{
+    height:30px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .displayaddr2{
+    height:30px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .map{
+    height:90vh;
+    width: 100%;
+  }
+  

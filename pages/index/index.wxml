@@ -1,0 +1,54 @@
+<view class="top-box">
+  <view>Hi</view>
+  <view class="next-text">欢迎使用！</view>
+</view>
+
+<!-- Logo -->
+<image class="logo" src="/pages/index/logo/logo.png" mode="aspectFit"/> 
+
+<!-- 登录、注册 -->
+<view class="center-box">
+  <view class="nav">
+    <view class="left {{current==1?'select':''}}" bindtap="click" data-code="1">
+      <text>登录</text>
+    </view>
+    <view class="right {{current==0?'select':''}}" bindtap="click" data-code="0">
+      <text>注册</text>
+    </view>
+  </view>
+  
+  <!-- 登录 -->
+  <view class="input-box" hidden="{{current==0}}">
+    <view class="wei-input">
+      <input class="input" placeholder="请输入学号" bindinput="getinput" data-id="studentid" value="{{studentid}}"/>
+    </view>
+    <view class="wei-input">
+      <input class="input" placeholder="请输入密码" bindinput="getinput" data-id="password" value="{{password}}"/>
+    </view>
+    
+  </view>
+
+  <!-- 注册 -->
+  <view class="input-box" hidden="{{current==1}}">
+    <view class="wei-input">
+      <input class="input" placeholder="请输入学号" bindinput="getinput" data-id="studentid" value="{{username}}"/>
+    </view>
+    <view class="wei-input">
+      <input class="input" placeholder="请输入用户名" bindinput="getinput" data-id="nickname" value="{{nickname}}"/>
+    </view>
+    <view class="wei-input">
+      <input class="input" placeholder="请输入密码" bindinput="getinput" data-id="password" value="{{password}}"/>
+    </view>
+  </view>
+
+  <view class="submit-btn">
+    <button class="button" 
+            style="background-color: #33ccff; font-size: 30rpx;" 
+            type="primary" bindtap="handleSubmit">{{current==1?'登录':'注册'}}</button>
+  </view>
+</view>
+
+<view class="shadow shadow-1"></view>
+<view class="shadow shadow-2"></view>
+
+<view class="bottom-box"></view>
