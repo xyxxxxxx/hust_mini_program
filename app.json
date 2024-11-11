@@ -1,11 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/search/search",
+    "pages/search/originSearch/originSearch",
+    "pages/search/destinationSearch/destinationSearch"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "Hust-navigation",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "style": "v2",

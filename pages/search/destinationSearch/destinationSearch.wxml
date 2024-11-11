@@ -1,0 +1,41 @@
+<view class="container" style="height: 1212rpx; display: flex; flex-direction: column; box-sizing: border-box; position: relative;">
+  <!-- 搜索栏 -->
+  <view class="search-row" style="height: 66rpx; display: flex; align-items: center;">
+    <image class="search-icon" src="magnifying-glass.png" alt="搜索" />
+    <input style="width: 562rpx; box-sizing: border-box;"
+      class="input"
+      placeholder="请输入目的地"
+      value="{{destination}}"
+      bindinput="onDestinationInput"
+      confirm-type="done"
+    />
+  </view>
+  
+  <!-- 当前位置信息 -->
+  <view class="location-container" style="height: 702rpx; width: 635rpx;">
+    <view class="current-location">
+      <text>您当前的位置: {{currentLocation}}</text>
+      <button class="location-btn" bindtap="onCurrentButtonTap">{{currentLocation}}</button>
+    </view>
+
+    <!-- 历史位置文字 -->
+    <text class="history-location">历史位置</text>
+
+    <!-- 历史搜索位置列表 -->
+    <view wx:if="{{historyLocations.length > 0}}" class="history-list">
+      <block wx:for="{{historyLocations}}" wx:key="index">
+        <button class="result-item" bindtap="onHistoryLocationTap" data-location="{{item}}">{{item}}</button>
+      </block>
+    </view>
+    <view wx:else>
+      <text>暂无历史搜索位置</text>
+    </view>
+
+    <!-- 搜索结果列表 -->
+    <view wx:if="{{destinationResults.length > 0}}" class="results-list">
+      <block wx:for="{{destinationResults}}" wx:key="title">
+        <button class="result-item" bindtap="onDestinationButtonTap" data-location="{{item}}">{{item.title}}</button>
+      </block>
+    </view>
+  </view>
+</view>

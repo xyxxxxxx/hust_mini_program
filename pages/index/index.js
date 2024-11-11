@@ -71,7 +71,7 @@ Page({
 
                         //返回到跳转页面
                         wx.redirectTo({
-                          url:`/pages/map/map`,
+                          url:`/pages/search/search`,
                         })
 
                       } else {
@@ -216,11 +216,10 @@ Page({
     },
     
     
-
-    
-    
-    onLoad(options) {
-      // 初始化代码
+    onLoad() {
+      // wx.navigateTo({
+      //   url: '/pages/map/map',
+      // })
     }
   });
   

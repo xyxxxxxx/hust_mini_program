@@ -1,11 +1,19 @@
 <!--pages/map/map.wxml-->
 <!--index.wxml-->
-<view class="displaystyle">this is a title</view>
-<view class="displayaddr1">aaa</view>
-<view class="displayaddr2">bbb</view>
-<button bindtap="button_x">出发地</button>
-<button bindtap="button_y">目的地</button>
-<button bindtap="button_z">确定</button>
+<view class="info-panel">
+  <view class="displaystyle">
+    <button class="return" bindtap="return_to">返回</button>
+  </view>
+  <view class="displayaddr1">
+    <text class="text1">{{"出发地："+origin}}</text>
+  </view>
+  <view class="displayaddr2">
+    <text class="text2">{{"目的地："+destination}}</text>
+  </view>
+  <view>
+    <text>{{"路程："+distance/1000+"km"}}</text>
+  </view>
+</view>
 
 <view class="container">
   <map
@@ -13,7 +21,6 @@
       class="map"
       latitude="{{latitude}}"
       longitude="{{longitude}}"
-      bindtap="button_x"
       enable-zoom="{{true}}"
       scale="{{scale}}"
       min-scale="4"
@@ -22,6 +29,4 @@
       polyline="{{polyline}}"
     >
     </map>
-    <!-- bindregionchange="bindregionchange"
-      bindpoitap="getLocation" -->
 </view>

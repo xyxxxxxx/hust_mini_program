@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-row">
+    <image class="search-icon" src="magnifying-glass.png" alt="搜索" />
+    <input
+      class="input"
+      placeholder="请输入出发地"
+      value="{{origin}}"
+      bindinput="onOriginInput"
+      confirm-type="done"
+    />
+  </view>
+  
+  <!-- 当前位置信息 -->
+  <view class="current-location">
+    <text>您当前的位置: {{currentLocation}}</text>
+    <button class="location-btn" bindtap="onOriginButtonTap">{{currentLocation}}</button> <!-- 显示位置信息的按钮 -->
+  </view>
+
+  <!-- 历史位置文字 -->
+  <text class="history-location">历史位置</text> <!-- 显示历史位置的文字 -->
+
+  <!-- 按首字母排序的地点列表 -->
+  <text class="sorted-location">按首字母排序的地点</text>
+  <view class="sorted-list">
+    <block wx:for="{{sortedLocations}}" wx:key="location">
+      <button class="sorted-btn" bindtap="onSelectLocation" data-location="{{item}}">{{item}}</button>
+    </block>
+  </view>
+
+
+  <!-- 搜索结果列表 -->
+  <view wx:if="{{originResults.length > 0}}" class="results-list">
+    <block wx:for="{{originResults}}" wx:key="title">
+      <button class="result-item" bindtap="onOriginButtonTap" data-location="{{item}}">{{item.title}}</button>
+    </block>
+  </view>
+  <!-- 其他内容 -->
+</view>

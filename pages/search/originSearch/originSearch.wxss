@@ -1,0 +1,77 @@
+.container {
+  width: 100%; /* 设置宽度为100%，也可以设置为其他具体的宽度 */
+  padding: 20px;
+}
+.search-row {
+  display: flex;
+  align-items: center;  /* 垂直居中 */
+}
+
+.search-icon {
+  width: 20px;  /* 根据需要调整图标大小 */
+  height: 20px;  /* 根据需要调整图标大小 */
+  margin-right: 10px;  /* 图标与输入框之间的间距 */
+}
+
+.search-input {
+  flex: 1; /* 自适应宽度 */
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.current-location {
+  text-align: left; /* 左对齐 */
+  margin-top: 10px; /* 添加上边距以增加间距 */
+  font-size: 16px; /* 设置字体大小 */
+  color: #333; /* 字体颜色 */
+}
+
+.location-btn {
+  margin-top: 5px; /* 添加按钮上边距 */
+  padding: 10px; /* 按钮内边距 */
+  background-color: #20ad4f; /* 背景颜色 */
+  color: rgb(255, 255, 255); /* 字体颜色 */
+  border: none; /* 去除边框 */
+  border-radius: 4px; /* 圆角 */
+  font-size: 16px; /* 字体大小 */
+}
+
+.history-location {
+  margin-top: 10px; /* 添加上边距以增加间距 */
+  font-size: 16px; /* 设置字体大小 */
+  color: #555; /* 字体颜色 */
+  text-align: left; /* 左对齐 */
+}
+
+.sorted-list {
+  margin-top: 10px; /* 添加上边距以增加间距 */
+}
+
+.sorted-btn {
+  display: block; /* 使按钮占据整行 */
+  width: 100%; /* 按钮宽度100% */
+  margin-top: 5px; /* 按钮之间的间距 */
+  padding: 10px; /* 按钮内边距 */
+  background-color: #e0e0e0; /* 按钮背景颜色 */
+  color: #333; /* 字体颜色 */
+  border: none; /* 去除边框 */
+  border-radius: 4px; /* 圆角 */
+  font-size: 16px; /* 字体大小 */
+  text-align: left; /* 文本左对齐 */
+}
+
+.results-list {
+  margin-top: 10px; /* 上边距 */
+}
+
+.result-item {
+  padding: 10px; /* 内边距 */
+  background-color: #f0f0f0; /* 背景颜色 */
+  border: none; /* 去除边框 */
+  width: 100%; /* 按钮宽度100% */
+  text-align: left; /* 文本左对齐 */
+}
+
+
